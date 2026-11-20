@@ -17,8 +17,8 @@ const FOOTER_NAV: { key: RouteKey; label: string }[] = [
 export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#0C1422] text-[#C6CED9] border-t border-[#24344D]">
-      <div className="max-w-[1320px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-[#24344D]">
+      <div className="max-w-[1320px] mx-auto px-5 sm:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-10 sm:pb-12 border-b border-[#24344D]">
           <div className="md:col-span-7 space-y-5">
             <a
               href="#home"
@@ -26,12 +26,12 @@ export function Footer({ onNavigate }: FooterProps) {
                 e.preventDefault();
                 onNavigate('home');
               }}
-              className="inline-flex items-center gap-4 font-display text-2xl sm:text-3xl text-[#F5F3EE]"
+              className="inline-flex items-center gap-3 sm:gap-4 font-display text-2xl sm:text-3xl text-[#F5F3EE]"
             >
               <img
                 src={MEDIA_ASSETS.logo}
                 alt=""
-                className="w-12 h-12 object-contain bg-white"
+                className="w-10 h-10 sm:w-12 sm:h-12 aspect-square shrink-0 rounded-full object-contain bg-white"
               />
               {BRAND.name}
             </a>

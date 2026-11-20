@@ -51,7 +51,7 @@ export function HomePage({
   return (
     <div>
       {/* 1. HERO & SIGNATURE ARCHITECTURAL EXPERIENCE */}
-      <section className="relative bg-[#101B2D] text-[#F5F3EE] pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-[#24344D] overflow-hidden">
+      <section className="relative bg-[#101B2D] text-[#F5F3EE] pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-24 border-b border-[#24344D] overflow-hidden">
         {/* Subtle architectural drafting grid accent */}
         <div
           aria-hidden="true"
@@ -64,7 +64,7 @@ export function HomePage({
         />
 
         <div className="relative max-w-[1320px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
             {/* Left Editorial Proposition */}
             <div className="lg:col-span-6 flex flex-col justify-between py-2">
               <div className="space-y-6">
@@ -81,7 +81,7 @@ export function HomePage({
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.65, delay: 0.08, ease: EASE_ARCH }}
-                  className="font-display text-[2.85rem] sm:text-[3.75rem] lg:text-[4.55rem] leading-[1.03] tracking-[-0.02em] text-[#F5F3EE] max-w-xl"
+                  className="font-display text-[2.5rem] sm:text-[3.75rem] lg:text-[4.55rem] leading-[1.03] tracking-[-0.02em] text-[#F5F3EE] max-w-xl"
                 >
                   Better businesses don&apos;t happen by accident. They&apos;re{' '}
                   <em className="italic text-[#E4D1B3] font-normal">designed.</em>
@@ -205,9 +205,9 @@ export function HomePage({
       </section>
 
       {/* 2. THE OPERATIONAL CHALLENGES BUSINESSES FACE */}
-      <section className="bg-[#F5F3EE] text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-[#F5F3EE] text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-stretch">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -280,9 +280,9 @@ export function HomePage({
       </section>
 
       {/* 3. AJ'S BUSINESS-FIRST PHILOSOPHY */}
-      <section className="bg-white text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-white text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -371,7 +371,7 @@ export function HomePage({
       </section>
 
       {/* 4. SIX CORE CAPABILITIES (Interactive Architectural Index) */}
-      <section className="bg-[#F5F3EE] text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-[#F5F3EE] text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -541,7 +541,7 @@ export function HomePage({
       {/* 5. FIVE-STAGE TRANSFORMATION METHODOLOGY */}
       <section
         id="homepage-methodology"
-        className="bg-[#101B2D] text-[#F5F3EE] py-20 lg:py-28 border-b border-[#24344D]"
+        className="bg-[#101B2D] text-[#F5F3EE] py-14 sm:py-16 lg:py-28 border-b border-[#24344D]"
       >
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <motion.div
@@ -687,7 +687,7 @@ export function HomePage({
       </section>
 
       {/* 6. INDUSTRIES SERVED */}
-      <section className="bg-white text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-white text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -842,7 +842,7 @@ export function HomePage({
       </section>
 
       {/* 7. BUSINESS TRANSFORMATION OUTCOMES */}
-      <section className="bg-[#F5F3EE] text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-[#F5F3EE] text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -894,7 +894,7 @@ export function HomePage({
       </section>
 
       {/* 8. CONSULTANCY APPROACH */}
-      <section className="bg-white text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-white text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <motion.div
@@ -935,7 +935,7 @@ export function HomePage({
       </section>
 
       {/* 9. INSIGHTS & THOUGHT LEADERSHIP */}
-      <section className="bg-[#F5F3EE] text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
+      <section className="bg-[#F5F3EE] text-[#303640] py-14 sm:py-16 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -1012,7 +1012,7 @@ export function HomePage({
       </section>
 
       {/* 10. CLOSING CONVERSION SECTION */}
-      <section className="bg-[#101B2D] text-[#F5F3EE] py-20 lg:py-28">
+      <section className="bg-[#101B2D] text-[#F5F3EE] py-14 sm:py-16 lg:py-28">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <motion.div

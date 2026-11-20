@@ -691,15 +691,17 @@ export function ArchitecturalViewport3D({
   const currentStage = ARCHITECTURAL_STAGES[activeStageIndex] ?? ARCHITECTURAL_STAGES[0];
 
   return (
-    <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[590px] border border-[#24344D] bg-[#101B2D] overflow-hidden flex flex-col">
+    <div className="relative w-full h-[380px] sm:h-[460px] md:h-[520px] lg:h-[590px] border border-[#24344D] bg-[#101B2D] overflow-hidden flex flex-col">
       {/* Minimal Top Architectural Spec Caption */}
-      <div className="relative z-10 flex items-center justify-between gap-4 px-5 py-3 border-b border-[#24344D] bg-[#101B2D]">
-        <div className="flex items-center gap-3 text-xs tracking-wider uppercase text-[#8994A3]">
+      <div className="relative z-10 flex items-center justify-between gap-2 px-3 sm:px-5 py-3 border-b border-[#24344D] bg-[#101B2D]">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3 text-[10px] sm:text-xs tracking-wider uppercase text-[#8994A3]">
           <span className="tabular-nums text-[#B69A70] font-semibold">
             {currentStage.index} / 04
           </span>
           <span aria-hidden="true">·</span>
-          <span className="text-[#F5F3EE] font-medium">{currentStage.label}</span>
+          <span className="min-w-0 truncate text-[#F5F3EE] font-medium">
+            {currentStage.label}
+          </span>
         </div>
 
         <div className="flex items-center gap-3">
@@ -708,17 +710,18 @@ export function ArchitecturalViewport3D({
               type="button"
               onClick={() => setIsAutoCycling((prev) => !prev)}
               aria-pressed={isAutoCycling}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] uppercase tracking-wider border border-[#2A3D5A] text-[#C6CED9] hover:border-[#B69A70] hover:text-[#F5F3EE] transition-colors whitespace-nowrap"
+              aria-label={isAutoCycling ? 'Pause sequence' : 'Play sequence'}
+              className="inline-flex shrink-0 items-center gap-1.5 px-2 py-1 sm:px-2.5 text-[11px] uppercase tracking-wider border border-[#2A3D5A] text-[#C6CED9] hover:border-[#B69A70] hover:text-[#F5F3EE] transition-colors whitespace-nowrap"
             >
               {isAutoCycling ? (
                 <>
                   <Pause className="w-3 h-3 text-[#B69A70]" />
-                  <span>Pause Sequence</span>
+                  <span className="hidden sm:inline">Pause Sequence</span>
                 </>
               ) : (
                 <>
                   <Play className="w-3 h-3 text-[#B69A70]" />
-                  <span>Play Sequence</span>
+                  <span className="hidden sm:inline">Play Sequence</span>
                 </>
               )}
             </button>

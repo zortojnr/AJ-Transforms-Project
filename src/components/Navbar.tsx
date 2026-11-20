@@ -47,7 +47,7 @@ export function Navbar({ activeRoute, onNavigate }: NavbarProps) {
         style={{ scaleX: smoothProgress }}
       />
 
-      <div className="max-w-[1320px] mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-8">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-8 h-[64px] sm:h-[68px] flex items-center justify-between gap-2 sm:gap-8">
         {/* Zone 1: Single-line Brand Wordmark */}
         <a
           href="#home"
@@ -55,12 +55,12 @@ export function Navbar({ activeRoute, onNavigate }: NavbarProps) {
             e.preventDefault();
             handleLinkClick('home');
           }}
-          className="flex items-center gap-3 font-display text-[1.45rem] sm:text-[1.7rem] tracking-[-0.01em] text-[#F5F3EE] whitespace-nowrap shrink-0 hover:text-[#B69A70] transition-colors duration-150"
+          className="flex min-w-0 items-center gap-2 sm:gap-3 font-display text-[1.25rem] sm:text-[1.7rem] tracking-[-0.01em] text-[#F5F3EE] whitespace-nowrap shrink-0 hover:text-[#B69A70] transition-colors duration-150"
         >
           <img
             src={MEDIA_ASSETS.logo}
             alt=""
-            className="w-10 h-10 object-contain bg-white"
+            className="w-9 h-9 sm:w-10 sm:h-10 aspect-square shrink-0 rounded-full object-contain bg-white"
           />
           {BRAND.shortName}
         </a>
@@ -106,7 +106,7 @@ export function Navbar({ activeRoute, onNavigate }: NavbarProps) {
           <button
             type="button"
             onClick={() => handleLinkClick('contact')}
-            className={`hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-semibold tracking-wide whitespace-nowrap shrink-0 transition-colors duration-150 min-h-[40px] ${
+            className={`hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-semibold tracking-wide whitespace-nowrap shrink-0 transition-colors duration-150 min-h-[40px] ${
               activeRoute === 'contact'
                 ? 'bg-[#F5F3EE] text-[#101B2D]'
                 : 'bg-[#B69A70] text-[#101B2D] hover:bg-[#C9AF87]'

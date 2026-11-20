@@ -30,7 +30,7 @@ function SubPageHeader({
   onBackHome,
 }: SubPageHeaderProps) {
   return (
-    <section className="bg-[#101B2D] text-[#F5F3EE] pt-12 pb-16 lg:pt-16 lg:pb-20 border-b border-[#24344D]">
+    <section className="bg-[#101B2D] text-[#F5F3EE] pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-[#24344D]">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 space-y-6">
         <button
           type="button"
@@ -78,8 +78,8 @@ export function AboutPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-20 lg:py-24 border-b border-[#E0DBD0]">
-        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export function AboutPage({
         </div>
       </section>
 
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-12 sm:py-16 lg:py-24">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 flex flex-col md:flex-row md:items-center justify-between gap-8 border border-[#D8D3C8] p-8 sm:p-12 bg-[#F9F8F5]">
           <div className="space-y-2 max-w-2xl">
             <h2 className="font-display text-3xl sm:text-4xl text-[#101B2D]">
@@ -162,7 +162,7 @@ export function CapabilitiesPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-20 lg:py-24">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 space-y-6">
           {CAPABILITIES.map((cap, idx) => (
             <motion.article
@@ -247,7 +247,7 @@ export function SolutionsPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-20 lg:py-24 border-b border-[#E0DBD0]">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {SOLUTION_TRACKS.map((track, idx) => (
             <motion.article
@@ -294,7 +294,7 @@ export function SolutionsPage({
         </div>
       </section>
 
-      <section className="bg-[#101B2D] text-[#F5F3EE] py-16 lg:py-20">
+      <section className="bg-[#101B2D] text-[#F5F3EE] py-12 sm:py-16 lg:py-20">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B69A70] mb-6">
             Five-Stage Delivery Spine
@@ -339,7 +339,7 @@ export function IndustriesPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-20 lg:py-24">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 space-y-6">
           {INDUSTRIES.map((industry, idx) => (
             <motion.article
@@ -453,7 +453,7 @@ export function InsightsPage({
           onBackHome={() => onSelectArticle(null)}
         />
 
-        <section className="bg-[#F5F3EE] py-16 lg:py-24">
+        <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24">
           <div className="max-w-[820px] mx-auto px-5 sm:px-8 space-y-8">
             <button
               type="button"
@@ -517,7 +517,7 @@ export function InsightsPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-16 lg:py-24">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 space-y-10">
           <div className="flex flex-wrap items-center gap-2">
             {categories.map((cat) => (
@@ -602,8 +602,8 @@ export function ContactPage({
         onBackHome={() => onNavigate('home')}
       />
 
-      <section className="bg-[#F5F3EE] py-16 lg:py-24">
-        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
