@@ -282,7 +282,7 @@ export function ArchitecturalViewport3D({
 
     const width = Math.max(container.clientWidth, 300);
     const height = Math.max(container.clientHeight, 300);
-    renderer.setSize(width, height);
+    renderer.setSize(width, height, false);
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.domElement.style.display = 'block';
@@ -638,7 +638,7 @@ export function ArchitecturalViewport3D({
         const h = Math.max(entry.contentRect.height, 260);
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
-        renderer.setSize(w, h);
+        renderer.setSize(w, h, false);
         requestRender();
       }
     });
@@ -737,7 +737,7 @@ export function ArchitecturalViewport3D({
       </div>
 
       {/* Central 3D Canvas or Graceful Fallback */}
-      <div className="relative flex-1 w-full min-h-0">
+      <div className="relative flex-1 w-full min-w-0 min-h-0">
         {webglUnavailable ? (
           <ArchitecturalFallbackSVG activeStageIndex={activeStageIndex} />
         ) : (

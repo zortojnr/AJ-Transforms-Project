@@ -66,7 +66,7 @@ export function HomePage({
         <div className="relative max-w-[1320px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
             {/* Left Editorial Proposition */}
-            <div className="lg:col-span-6 flex flex-col justify-between py-2">
+            <div className="min-w-0 lg:col-span-6 flex flex-col justify-between py-2">
               <div className="space-y-6">
                 <motion.p
                   initial={{ opacity: 0, y: 12 }}
@@ -160,7 +160,7 @@ export function HomePage({
               initial={{ opacity: 0, scale: 0.985 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.75, delay: 0.14, ease: EASE_ARCH }}
-              className="lg:col-span-6 flex flex-col"
+              className="min-w-0 lg:col-span-6 flex flex-col"
             >
               <ArchitecturalViewport3D
                 activeStageIndex={heroStageIndex}
