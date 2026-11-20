@@ -8,7 +8,6 @@ import {
   INSIGHTS,
   MEDIA_ASSETS,
   METHODOLOGY_STAGES,
-  PLACEHOLDER_DIRECTORY,
   SOLUTION_TRACKS,
   type RouteKey,
 } from '../data/consultancyData';
@@ -75,7 +74,7 @@ export function AboutPage({
       <SubPageHeader
         kicker={`About ${BRAND.name}`}
         title="Commercially intelligent operational design."
-        subtitle={`${BRAND.positioning} Led by ${BRAND.principal}, ${BRAND.name} helps mid-market organisations replace operational friction with deliberate, scalable systems.`}
+        subtitle={`${BRAND.positioning} ${BRAND.name} helps organisations replace operational friction with deliberate, scalable systems.`}
         onBackHome={() => onNavigate('home')}
       />
 
@@ -101,9 +100,6 @@ export function AboutPage({
               real operations, diagnosing structural bottlenecks, simplifying
               workflows, and only then applying automation or AI where it
               creates dependable value.
-            </p>
-            <p className="text-xs text-[#6A7381]">
-              {PLACEHOLDER_DIRECTORY.credentialsNotice}
             </p>
           </motion.div>
 
@@ -133,7 +129,7 @@ export function AboutPage({
               Begin with a structured diagnostic conversation
             </h2>
             <p className="text-sm text-[#4A5260] leading-relaxed">
-              Discuss your operational priorities directly with {BRAND.principal}.
+              Share your operational priorities and prepare a consultation brief.
             </p>
           </div>
           <button
@@ -602,7 +598,7 @@ export function ContactPage({
       <SubPageHeader
         kicker={`Contact ${BRAND.name}`}
         title="Begin a business-first conversation."
-        subtitle="Tell us about your organisation’s operational context. We respond directly to senior decision-makers with a clear view on whether and how we can help."
+        subtitle="Use the form to prepare a consultation brief about your organisation’s operational context. This page does not send or store submissions."
         onBackHome={() => onNavigate('home')}
       />
 
@@ -616,59 +612,28 @@ export function ContactPage({
           >
             <div className="bg-white border border-[#D8D3C8] p-8 space-y-5">
               <h2 className="font-display text-3xl text-[#101B2D]">
-                Direct Consultancy Details
+                Prepare a consultation brief
               </h2>
-              <div className="space-y-4 text-sm">
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Principal
-                  </span>
-                  <span className="font-medium text-[#101B2D]">
-                    {BRAND.principal} · {BRAND.principalRole}
-                  </span>
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Business Email
-                  </span>
-                  <span className="font-medium text-[#101B2D]">
-                    {PLACEHOLDER_DIRECTORY.email}
-                  </span>
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Telephone
-                  </span>
-                  <span className="font-medium text-[#101B2D]">
-                    {PLACEHOLDER_DIRECTORY.telephone}
-                  </span>
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Region
-                  </span>
-                  <span className="text-[#4A5260]">
-                    {PLACEHOLDER_DIRECTORY.officeRegion}
-                  </span>
-                </div>
-              </div>
+              <p className="text-sm text-[#4A5260] leading-relaxed">
+                Describe the operational challenge, goals, and context you want
+                to discuss. Your entries stay in this page and are not submitted
+                to a server.
+              </p>
             </div>
 
             <div className="bg-[#101B2D] text-[#F5F3EE] p-8 space-y-4">
               <h3 className="font-display text-2xl sm:text-3xl text-[#F5F3EE]">
-                What to expect in an initial call
+                What to include
               </h3>
               <ul className="space-y-3 text-sm text-[#C6CED9]">
                 <li>
-                  01. A focused discussion of your commercial priorities and
-                  operational friction—no generic slide decks.
+                  01. The workflow or operational challenge you want to address.
                 </li>
                 <li>
-                  02. Candid assessment of whether process redesign, workflow
-                  automation, or diagnostic analysis is the right first step.
+                  02. The business goals and practical constraints involved.
                 </li>
                 <li>
-                  03. Clear outline of scope and next steps if there is mutual fit.
+                  03. Any process, systems, or teams already involved.
                 </li>
               </ul>
             </div>

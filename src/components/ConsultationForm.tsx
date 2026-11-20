@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Check, ArrowRight } from 'lucide-react';
-import { BRAND, CAPABILITIES, INDUSTRIES } from '../data/consultancyData';
+import { CAPABILITIES, INDUSTRIES } from '../data/consultancyData';
 
 interface ConsultationFormProps {
   theme?: 'dark' | 'light';
@@ -121,9 +121,7 @@ export function ConsultationForm({
           }`}
         >
           Your consultation brief for <strong>{submittedRecord.organisation}</strong> has
-          been structured for review. Once official mailbox routing from the capability
-          statement is connected, inquiries will route directly to{' '}
-          {BRAND.name}.
+          been prepared in this browser session. It has not been sent or stored.
         </p>
 
         <dl

@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { BRAND, type RouteKey } from '../data/consultancyData';
+import { BRAND, MEDIA_ASSETS, type RouteKey } from '../data/consultancyData';
 
 interface NavbarProps {
   activeRoute: RouteKey;
@@ -55,8 +55,13 @@ export function Navbar({ activeRoute, onNavigate }: NavbarProps) {
             e.preventDefault();
             handleLinkClick('home');
           }}
-          className="font-display text-[1.45rem] sm:text-[1.7rem] tracking-[-0.01em] text-[#F5F3EE] whitespace-nowrap shrink-0 hover:text-[#B69A70] transition-colors duration-150"
+          className="flex items-center gap-3 font-display text-[1.45rem] sm:text-[1.7rem] tracking-[-0.01em] text-[#F5F3EE] whitespace-nowrap shrink-0 hover:text-[#B69A70] transition-colors duration-150"
         >
+          <img
+            src={MEDIA_ASSETS.logo}
+            alt=""
+            className="w-10 h-10 object-contain bg-white"
+          />
           {BRAND.shortName}
         </a>
 

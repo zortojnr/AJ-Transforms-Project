@@ -11,7 +11,6 @@ import {
   METHODOLOGY_STAGES,
   OPERATIONAL_CHALLENGES,
   OUTCOME_PILLARS,
-  PLACEHOLDER_DIRECTORY,
   type RouteKey,
 } from '../data/consultancyData';
 import { ArchitecturalViewport3D } from './ArchitecturalViewport3D';
@@ -175,7 +174,7 @@ export function HomePage({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: EASE_ARCH }}
-            className="mt-14 pt-8 border-t border-[#24344D] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+            className="mt-14 pt-8 border-t border-[#24344D] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             <div className="space-y-1">
               <span className="block text-xs uppercase tracking-[0.14em] text-[#B69A70] font-semibold">
@@ -199,14 +198,6 @@ export function HomePage({
               </span>
               <p className="text-sm text-[#F5F3EE] font-medium">
                 Sustainable Growth
-              </p>
-            </div>
-            <div className="space-y-1">
-              <span className="block text-xs uppercase tracking-[0.14em] text-[#B69A70] font-semibold">
-                Leadership
-              </span>
-              <p className="text-sm text-[#F5F3EE] font-medium">
-                Led by {BRAND.principal}
               </p>
             </div>
           </motion.div>
@@ -902,69 +893,31 @@ export function HomePage({
         </div>
       </section>
 
-      {/* 8. LEADERSHIP INTRODUCTION */}
+      {/* 8. CONSULTANCY APPROACH */}
       <section className="bg-white text-[#303640] py-20 lg:py-28 border-b border-[#E0DBD0]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Architectural Portrait Placeholder (No fabricated photo) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, ease: EASE_ARCH }}
-              className="lg:col-span-4"
-            >
-              <div className="aspect-[3/4] bg-[#101B2D] border border-[#24344D] p-8 flex flex-col justify-between text-[#F5F3EE]">
-                <div className="flex items-center justify-between text-xs text-[#8994A3]">
-                  <span className="uppercase tracking-[0.14em] text-[#B69A70] font-semibold">
-                    Leadership
-                  </span>
-                  <span>AJ</span>
-                </div>
-
-                <div className="my-auto py-8 border-y border-[#24344D] text-center space-y-3">
-                  <div className="w-16 h-16 mx-auto border border-[#B69A70] flex items-center justify-center font-display text-2xl text-[#B69A70]">
-                    AJ
-                  </div>
-                  <p className="text-xs text-[#C6CED9] leading-relaxed max-w-[220px] mx-auto">
-                    {PLACEHOLDER_DIRECTORY.portraitStatus}
-                  </p>
-                </div>
-
-                <div className="text-xs text-[#8994A3]">
-                  <span className="block text-[#F5F3EE] font-medium">
-                    {BRAND.principal}
-                  </span>
-                  <span>{BRAND.principalRole}</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: EASE_ARCH }}
-              className="lg:col-span-8 space-y-6"
+              className="lg:col-span-9 lg:col-start-2 space-y-6"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
-                Consultancy Leadership
+                Our Approach
               </p>
               <h2 className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] text-[#101B2D]">
-                Led by {BRAND.principal}
+                Better operations begin with understanding how work gets done.
               </h2>
               <p className="text-base text-[#303640] leading-[1.7] max-w-2xl">
-                {BRAND.name} was established to give mid-market leadership teams
-                a commercially grounded partner for operational improvement,
-                process transformation, and practical technology adoption.
+                {BRAND.philosophy} AJ Transforms works with organisations to
+                improve processes, reduce manual work, and adopt practical
+                technology where it supports clear business goals.
               </p>
               <p className="text-[15px] text-[#4A5260] leading-[1.7] max-w-2xl">
-                Every engagement is anchored in clear thinking, direct executive
-                collaboration, and structural rigour—ensuring technology choices
-                follow operational understanding rather than vendor agendas.
-              </p>
-              <p className="text-xs text-[#6A7381] max-w-2xl">
-                {PLACEHOLDER_DIRECTORY.credentialsNotice}
+                Each engagement starts by understanding existing operations,
+                then identifying improvements before considering automation.
               </p>
               <div className="pt-2">
                 <button
@@ -1081,24 +1034,6 @@ export function HomePage({
                 slowing execution.
               </p>
 
-              <div className="pt-6 border-t border-[#24344D] space-y-4 text-sm">
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Direct Email
-                  </span>
-                  <span className="text-[#F5F3EE]">
-                    {PLACEHOLDER_DIRECTORY.email}
-                  </span>
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-[0.12em] text-[#8994A3]">
-                    Telephone
-                  </span>
-                  <span className="text-[#F5F3EE]">
-                    {PLACEHOLDER_DIRECTORY.telephone}
-                  </span>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div

@@ -1,4 +1,4 @@
-import { BRAND, PLACEHOLDER_DIRECTORY, type RouteKey } from '../data/consultancyData';
+import { BRAND, MEDIA_ASSETS, type RouteKey } from '../data/consultancyData';
 
 interface FooterProps {
   onNavigate: (route: RouteKey) => void;
@@ -19,15 +19,20 @@ export function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-[#0C1422] text-[#C6CED9] border-t border-[#24344D]">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-[#24344D]">
-          <div className="md:col-span-5 space-y-5">
+          <div className="md:col-span-7 space-y-5">
             <a
               href="#home"
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate('home');
               }}
-              className="font-display text-2xl sm:text-3xl text-[#F5F3EE] inline-block"
+              className="inline-flex items-center gap-4 font-display text-2xl sm:text-3xl text-[#F5F3EE]"
             >
+              <img
+                src={MEDIA_ASSETS.logo}
+                alt=""
+                className="w-12 h-12 object-contain bg-white"
+              />
               {BRAND.name}
             </a>
             <p className="text-sm text-[#8994A3] leading-relaxed max-w-md">
@@ -38,7 +43,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </p>
           </div>
 
-          <div className="md:col-span-3 space-y-4">
+          <div className="md:col-span-5 space-y-4">
             <h2 className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#B69A70]">
               Navigation
             </h2>
@@ -60,31 +65,6 @@ export function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
-          <div className="md:col-span-4 space-y-4">
-            <h2 className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-[#B69A70]">
-              Direct Enquiries
-            </h2>
-            <div className="space-y-3 text-sm text-[#C6CED9]">
-              <div>
-                <span className="block text-xs text-[#8994A3]">Leadership</span>
-                <span>
-                  {BRAND.principal} · {BRAND.principalRole}
-                </span>
-              </div>
-              <div>
-                <span className="block text-xs text-[#8994A3]">Business Email</span>
-                <span className="text-[#F5F3EE]">{PLACEHOLDER_DIRECTORY.email}</span>
-              </div>
-              <div>
-                <span className="block text-xs text-[#8994A3]">Telephone</span>
-                <span className="text-[#F5F3EE]">{PLACEHOLDER_DIRECTORY.telephone}</span>
-              </div>
-              <div>
-                <span className="block text-xs text-[#8994A3]">Office & Region</span>
-                <span>{PLACEHOLDER_DIRECTORY.officeRegion}</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#8994A3]">

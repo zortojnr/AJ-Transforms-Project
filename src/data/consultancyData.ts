@@ -90,8 +90,6 @@ export interface SolutionTrack {
 export const BRAND = {
   name: 'AJ Transforms',
   shortName: 'AJ Transforms',
-  principal: 'Afolayan Jegede',
-  principalRole: 'Principal & Lead Consultant',
   positioning: 'Operational Excellence. Practical Innovation. Sustainable Growth.',
   concept: 'The Architecture of Better Business',
   coreStatement: "Better businesses don't happen by accident. They're designed.",
@@ -101,16 +99,8 @@ export const BRAND = {
     'Mid-market organisations, leadership teams, and operational decision-makers worldwide.',
 };
 
-export const PLACEHOLDER_DIRECTORY = {
-  email: '[Business Email Pending — From Capability Statement]',
-  telephone: '[Business Telephone Pending — From Capability Statement]',
-  officeRegion: '[Jurisdiction / Office Details Pending — From Capability Statement]',
-  portraitStatus: '[Approved Executive Portrait Pending — Afolayan Jegede]',
-  credentialsNotice:
-    'Additional biographical details and approved credentials will be incorporated directly from the finalised capability statement.',
-};
-
 export const MEDIA_ASSETS = {
+  logo: '/src/assets/images/aj-symbol-navy-gold.jpg',
   atriumLight: '/src/assets/images/arch_atrium_light_1795006637773.jpg',
   joineryDetail: '/src/assets/images/arch_joinery_detail_1795006662862.jpg',
   consultancyStudio: '/src/assets/images/arch_consultancy_studio_1795006635192.jpg',
