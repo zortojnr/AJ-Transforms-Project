@@ -218,18 +218,24 @@ export function ArchitecturalViewport3D({
   }, [activeStageIndex]);
 
   useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mobileQuery = window.matchMedia('(max-width: 767px)');
     const sync = () => {
-      reducedMotionRef.current = mq.matches;
-      setPrefersReducedMotion(mq.matches);
-      if (mq.matches) {
+      const motionDisabled = reducedMotionQuery.matches || mobileQuery.matches;
+      reducedMotionRef.current = motionDisabled;
+      setPrefersReducedMotion(motionDisabled);
+      if (motionDisabled) {
         setIsAutoCycling(false);
       }
       requestRenderRef.current?.();
     };
     sync();
-    mq.addEventListener('change', sync);
-    return () => mq.removeEventListener('change', sync);
+    reducedMotionQuery.addEventListener('change', sync);
+    mobileQuery.addEventListener('change', sync);
+    return () => {
+      reducedMotionQuery.removeEventListener('change', sync);
+      mobileQuery.removeEventListener('change', sync);
+    };
   }, []);
 
   // Optional guided sequence playback across the 4 stages
