@@ -71,7 +71,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col bg-[#F5F3EE] text-[#303640]">
+      <div className="mobile-static-motion min-h-screen flex flex-col bg-[#F5F3EE] text-[#303640]">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#B69A70] focus:text-[#101B2D] focus:text-sm focus:font-semibold"

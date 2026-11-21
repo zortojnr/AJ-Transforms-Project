@@ -45,6 +45,23 @@
   }
 }
 
+@media (max-width: 767px) {
+  .mobile-static-motion [style*="opacity"] {
+    opacity: 1 !important;
+  }
+
+  .mobile-static-motion [style*="transform"] {
+    transform: none !important;
+  }
+
+  .mobile-static-motion *,
+  .mobile-static-motion *::before,
+  .mobile-static-motion *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
