@@ -209,7 +209,7 @@ export function ArchitecturalViewport3D({
 
   const [webglUnavailable, setWebglUnavailable] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [isAutoCycling, setIsAutoCycling] = useState(false);
+  const [isAutoCycling, setIsAutoCycling] = useState(true);
 
   useEffect(() => {
     stageRef.current = activeStageIndex;
@@ -219,23 +219,17 @@ export function ArchitecturalViewport3D({
 
   useEffect(() => {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const mobileQuery = window.matchMedia('(max-width: 767px)');
     const sync = () => {
-      const motionDisabled = reducedMotionQuery.matches || mobileQuery.matches;
-      reducedMotionRef.current = motionDisabled;
-      setPrefersReducedMotion(motionDisabled);
-      if (motionDisabled) {
+      reducedMotionRef.current = reducedMotionQuery.matches;
+      setPrefersReducedMotion(reducedMotionQuery.matches);
+      if (reducedMotionQuery.matches) {
         setIsAutoCycling(false);
       }
       requestRenderRef.current?.();
     };
     sync();
     reducedMotionQuery.addEventListener('change', sync);
-    mobileQuery.addEventListener('change', sync);
-    return () => {
-      reducedMotionQuery.removeEventListener('change', sync);
-      mobileQuery.removeEventListener('change', sync);
-    };
+    return () => reducedMotionQuery.removeEventListener('change', sync);
   }, []);
 
   // Optional guided sequence playback across the 4 stages
@@ -711,27 +705,27 @@ export function ArchitecturalViewport3D({
         </div>
 
         <div className="flex items-center gap-3">
-          {!prefersReducedMotion && (
-            <button
-              type="button"
-              onClick={() => setIsAutoCycling((prev) => !prev)}
-              aria-pressed={isAutoCycling}
-              aria-label={isAutoCycling ? 'Pause sequence' : 'Play sequence'}
-              className="inline-flex shrink-0 items-center gap-1.5 px-2 py-1 sm:px-2.5 text-[11px] uppercase tracking-wider border border-[#2A3D5A] text-[#C6CED9] hover:border-[#B69A70] hover:text-[#F5F3EE] transition-colors whitespace-nowrap"
-            >
-              {isAutoCycling ? (
-                <>
-                  <Pause className="w-3 h-3 text-[#B69A70]" />
-                  <span className="hidden sm:inline">Pause Sequence</span>
-                </>
-              ) : (
-                <>
-                  <Play className="w-3 h-3 text-[#B69A70]" />
-                  <span className="hidden sm:inline">Play Sequence</span>
-                </>
-              )}
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => setIsAutoCycling((prev) => !prev)}
+            aria-pressed={isAutoCycling}
+            aria-label={isAutoCycling ? 'Pause sequence' : 'Play sequence'}
+            className="inline-flex shrink-0 items-center gap-1.5 px-1.5 py-1 sm:px-2.5 text-[10px] sm:text-[11px] uppercase tracking-wider border border-[#2A3D5A] text-[#C6CED9] hover:border-[#B69A70] hover:text-[#F5F3EE] transition-colors whitespace-nowrap"
+          >
+            {isAutoCycling ? (
+              <>
+                <Pause className="w-3 h-3 text-[#B69A70]" />
+                <span className="sm:hidden">Pause</span>
+                <span className="hidden sm:inline">Pause Sequence</span>
+              </>
+            ) : (
+              <>
+                <Play className="w-3 h-3 text-[#B69A70]" />
+                <span className="sm:hidden">Play</span>
+                <span className="hidden sm:inline">Play Sequence</span>
+              </>
+            )}
+          </button>
           <span className="text-xs text-[#8994A3] hidden sm:inline">
             {webglUnavailable
               ? 'Schematic'
