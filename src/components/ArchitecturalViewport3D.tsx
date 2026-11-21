@@ -768,7 +768,7 @@ export function ArchitecturalViewport3D({
                   setIsAutoCycling(false);
                   onSelectStage(idx);
                 }}
-                className={`text-left px-3 py-2.5 border transition-colors duration-150 whitespace-nowrap overflow-hidden text-ellipsis min-h-[44px] flex items-center gap-2 ${
+                className={`text-left px-2 sm:px-3 py-2.5 border transition-colors duration-150 whitespace-nowrap overflow-hidden text-ellipsis min-h-[44px] flex items-center gap-1 sm:gap-2 ${
                   isActive
                     ? 'border-[#B69A70] bg-[#18273E] text-[#F5F3EE]'
                     : 'border-[#24344D] bg-[#101B2D] text-[#8994A3] hover:text-[#F5F3EE] hover:border-[#3A5070]'
@@ -781,7 +781,7 @@ export function ArchitecturalViewport3D({
                 >
                   {stage.index}
                 </span>
-                <span className="text-xs sm:text-[13px] font-medium truncate">
+                <span className="text-[10px] sm:text-[13px] font-medium truncate">
                   {stage.label}
                 </span>
               </button>

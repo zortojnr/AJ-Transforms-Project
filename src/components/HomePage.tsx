@@ -436,7 +436,7 @@ export function HomePage({
                       >
                         {cap.index}
                       </span>
-                      <span className="font-display text-2xl truncate">
+                      <span className="min-w-0 font-display text-xl sm:text-2xl leading-tight">
                         {cap.title}
                       </span>
                     </div>
@@ -744,7 +744,9 @@ export function HomePage({
                         aria-hidden="true"
                       />
                     )}
-                    <span className="relative z-10 truncate">{industry.name}</span>
+                    <span className="relative z-10 min-w-0 flex-1 whitespace-normal leading-tight">
+                      {industry.name}
+                    </span>
                     {industry.isIllustrative && (
                       <span
                         className={`relative z-10 text-[11px] ml-2 shrink-0 ${

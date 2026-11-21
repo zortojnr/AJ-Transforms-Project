@@ -548,7 +548,7 @@ export function InsightsPage({
               {filtered.map((article) => (
                 <article
                   key={article.id}
-                  className="bg-white border border-[#D8D3C8] p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6"
+                  className="bg-white border border-[#D8D3C8] p-5 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6"
                 >
                   <div className="space-y-3 max-w-3xl">
                     <div className="flex items-center gap-2 text-xs text-[#6A7381]">
@@ -608,9 +608,9 @@ export function ContactPage({
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: EASE_ARCH }}
-            className="lg:col-span-5 space-y-8"
+            className="order-2 lg:order-1 lg:col-span-5 space-y-6 sm:space-y-8"
           >
-            <div className="bg-white border border-[#D8D3C8] p-8 space-y-5">
+            <div className="bg-white border border-[#D8D3C8] p-5 sm:p-8 space-y-4 sm:space-y-5">
               <h2 className="font-display text-3xl text-[#101B2D]">
                 Prepare a consultation brief
               </h2>
@@ -621,7 +621,7 @@ export function ContactPage({
               </p>
             </div>
 
-            <div className="bg-[#101B2D] text-[#F5F3EE] p-8 space-y-4">
+            <div className="bg-[#101B2D] text-[#F5F3EE] p-5 sm:p-8 space-y-4">
               <h3 className="font-display text-2xl sm:text-3xl text-[#F5F3EE]">
                 What to include
               </h3>
@@ -643,7 +643,7 @@ export function ContactPage({
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08, ease: EASE_ARCH }}
-            className="lg:col-span-7 bg-white border border-[#D8D3C8] p-7 sm:p-10"
+            className="order-1 lg:order-2 lg:col-span-7 bg-white border border-[#D8D3C8] p-5 sm:p-10"
           >
             <ConsultationForm theme="light" initialFocus={initialFocus} />
           </motion.div>
