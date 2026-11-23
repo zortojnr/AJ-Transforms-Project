@@ -72,74 +72,166 @@ export function AboutPage({
   return (
     <div>
       <SubPageHeader
-        kicker={`About ${BRAND.name}`}
-        title="Commercially intelligent operational design."
-        subtitle={`${BRAND.positioning} ${BRAND.name} helps organisations replace operational friction with deliberate, scalable systems.`}
+        kicker="About Us"
+        title="Transforming how businesses work, from the inside out."
+        subtitle="We help businesses identify operational challenges, understand their causes and improve how work gets done."
         onBackHome={() => onNavigate('home')}
       />
 
       <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
-        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.55, ease: EASE_ARCH }}
-            className="lg:col-span-6 space-y-6"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
-              Our Standpoint
-            </p>
-            <h2 className="font-display text-4xl sm:text-5xl text-[#101B2D]">
-              &ldquo;{BRAND.philosophy}&rdquo;
-            </h2>
-            <p className="text-[15px] text-[#303640] leading-relaxed">
-              Many transformation efforts stall because technology is introduced
-              before the organisation understands how work actually flows. We
-              approach transformation as an architectural discipline: observing
-              real operations, diagnosing structural bottlenecks, simplifying
-              workflows, and only then applying automation or AI where it
-              creates dependable value.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.55, delay: 0.1, ease: EASE_ARCH }}
-            className="lg:col-span-6"
-          >
-            <div className="group aspect-[16/10] overflow-hidden border border-[#D8D3C8]">
-              <ResilientImage
-                src={MEDIA_ASSETS.consultancyStudio}
-                alt="Minimalist executive strategy room with midnight navy walls and pale travertine table"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                fallbackTitle="Consultancy Strategy Environment"
-              />
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
+            <div className="lg:col-span-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
+                Section 01 – Introduction
+              </p>
+              <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[#101B2D]">
+                About AJ Transforms
+              </h2>
             </div>
-          </motion.div>
+            <div className="lg:col-span-8 space-y-5 text-[15px] sm:text-[16px] text-[#303640] leading-relaxed">
+              <p>
+                Every business has opportunities to improve. But identifying where those opportunities exist is not always straightforward.
+              </p>
+              <p>
+                Inefficient processes, disconnected systems, repetitive administrative tasks and unclear workflows can quietly drain time, money and productivity while affecting the quality of customer service.
+              </p>
+              <p>
+                AJ Transforms helps businesses identify these operational challenges, understand their underlying causes and develop practical ways to improve how work gets done.
+              </p>
+              <p>
+                We focus on making business operations more efficient, connected and scalable through better processes, smarter systems, workflow automation and the appropriate use of artificial intelligence.
+              </p>
+              <p>
+                Our objective is simple: help businesses spend less time dealing with operational inefficiencies and more time focusing on their customers, people and growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
+              Section 02 – Our Standpoint
+            </p>
+          </div>
+          <div className="lg:col-span-8 space-y-5 text-[15px] sm:text-[16px] text-[#303640] leading-relaxed">
+            <h2 className="font-display text-3xl sm:text-4xl text-[#101B2D]">
+              We don&apos;t begin with technology. We begin with understanding your business.
+            </h2>
+            <p>
+              Technology alone does not transform a business. Introducing new software, automation or artificial intelligence into an inefficient process can simply make an existing problem happen faster.
+            </p>
+            <p>
+              Before recommending a solution, we believe it is essential to understand how a business actually operates.
+            </p>
+            <p>
+              How does work move from one stage to another? Where do delays occur? Which activities depend too heavily on manual input? Where are information gaps, duplicated tasks or unnecessary steps affecting performance?
+            </p>
+            <p>
+              These questions help uncover the operational issues that are not always immediately visible. At AJ Transforms, we believe meaningful transformation starts with understanding the problem, not choosing the technology.
+            </p>
+            <p>
+              By establishing a clear picture of the current situation, we can identify improvements that are relevant, practical and commercially worthwhile.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F5F3EE] py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
+              Section 03 – Who We Are
+            </p>
+          </div>
+          <div className="lg:col-span-8 space-y-5 text-[15px] sm:text-[16px] text-[#303640] leading-relaxed">
+            <h2 className="font-display text-3xl sm:text-4xl text-[#101B2D]">
+              A business transformation consultancy focused on better ways of working.
+            </h2>
+            <p>
+              AJ Transforms is a business transformation consultancy that helps organisations examine, improve and strengthen the way they operate.
+            </p>
+            <p>
+              We work with growing small and medium-sized businesses, as well as established organisations, that want to improve operational efficiency, reduce unnecessary costs and create better ways of working.
+            </p>
+            <p>
+              Our focus is on the relationship between people, processes, systems and technology.
+            </p>
+            <p>
+              We recognise that operational challenges rarely exist in isolation. A delay in one department can affect another. A manual process can create unnecessary administration. Disconnected systems can make it difficult for teams to access the information they need. Over time, these issues can affect productivity, costs and customer experience.
+            </p>
+            <p>
+              Our role is to help businesses see the bigger picture, identify where improvements are needed and determine the most appropriate way forward.
+            </p>
+            <p>
+              We take a practical, business-first approach. Rather than recommending technology for its own sake, we focus on solutions that address genuine operational needs and support measurable business improvement.
+            </p>
+            <p>We believe that better businesses are built through better ways of working.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12 sm:py-16 lg:py-24 border-b border-[#E0DBD0]">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
+            Section 04 – Our Approach
+          </p>
+          <h2 className="mt-4 mb-10 font-display text-3xl sm:text-4xl text-[#101B2D]">
+            Understand first. Improve with purpose. Transform with confidence.
+          </h2>
+          <p className="max-w-3xl mb-10 text-[15px] sm:text-[16px] text-[#303640] leading-relaxed">
+            Every business is different. That is why we do not believe in applying the same solution to every organisation. Our approach is structured around understanding the business, identifying opportunities and developing improvements that address the real issues.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-[#D8D3C8] border border-[#D8D3C8]">
+            {[
+              ['1', 'Understand the Business', 'We begin by learning how the organisation operates. This involves understanding existing processes, workflows, responsibilities, systems and the way information moves across the business. We look at how everyday activities are carried out, where challenges arise and what matters most to the organisation.'],
+              ['2', 'Identify the Opportunities', 'Once we understand the current operation, we examine where time, money and resources may be lost. This could include repetitive manual tasks, unnecessary administration, duplicated work, process delays, disconnected systems or inefficient communication. We distinguish between symptoms and underlying causes so improvements address the right issues.'],
+              ['3', 'Redesign and Simplify Processes', 'Before introducing new technology, we consider how existing processes can be improved. This may involve removing unnecessary steps, clarifying responsibilities, improving handovers, simplifying workflows and creating more consistent ways of working.'],
+              ['4', 'Apply Automation and AI Where Appropriate', 'Once processes have been properly understood and improved, we identify opportunities where technology can add value. This may include workflow automation, reducing repetitive administration, improving information management, connecting systems and applying artificial intelligence to suitable business activities.'],
+              ['5', 'Support Sustainable Improvement', 'Transformation should deliver lasting value, not just a short-term change. We help businesses establish better operating practices, improve consistency and create systems that support future growth. Improvements can be assessed against objectives such as time saved, reduced manual effort, fewer errors and improved customer experience.'],
+            ].map(([index, title, copy]) => (
+              <article key={index} className="bg-[#F9F8F5] p-6 space-y-4">
+                <span className="text-xs font-semibold tracking-[0.16em] text-[#8C7046]">{index.padStart(2, '0')}</span>
+                <h3 className="font-display text-xl text-[#101B2D]">{title}</h3>
+                <p className="text-sm text-[#4A5260] leading-relaxed">{copy}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-12 sm:py-16 lg:py-24">
-        <div className="max-w-[1320px] mx-auto px-5 sm:px-8 flex flex-col md:flex-row md:items-center justify-between gap-8 border border-[#D8D3C8] p-8 sm:p-12 bg-[#F9F8F5]">
-          <div className="space-y-2 max-w-2xl">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7046]">
+            Section 05 – Call to Action
+          </p>
+          <div className="mt-4 flex flex-col md:flex-row md:items-center justify-between gap-8 border border-[#D8D3C8] p-8 sm:p-12 bg-[#F9F8F5]">
+            <div className="space-y-4 max-w-2xl">
             <h2 className="font-display text-3xl sm:text-4xl text-[#101B2D]">
-              Begin with a structured diagnostic conversation
+              Let&apos;s start with your business.
             </h2>
             <p className="text-sm text-[#4A5260] leading-relaxed">
-              Share your operational priorities and prepare a consultation brief.
+              Every business has its own challenges, priorities and opportunities for improvement. Perhaps your team spends too much time on repetitive administration. Maybe processes have become complicated as the business has grown, or different systems and departments are not working together effectively.
             </p>
+            <p className="text-sm text-[#4A5260] leading-relaxed">
+              Whatever the challenge, the first step is understanding what is happening and where improvements can make a difference. Start a conversation with AJ Transforms. Tell us about your business, your operational priorities and the challenges you want to address.
+            </p>
+            <p className="text-sm font-semibold text-[#101B2D]">
+              Better processes. Smarter operations. Sustainable growth.
+            </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => onStartConsultation('About Us Consultation')}
+              className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#101B2D] text-[#F5F3EE] hover:bg-[#1C2D47] text-sm font-semibold whitespace-nowrap shrink-0 min-h-[44px]"
+            >
+              <span>Start a Conversation</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-1" />
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={() => onStartConsultation('Full Operational Diagnostic')}
-            className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#101B2D] text-[#F5F3EE] hover:bg-[#1C2D47] text-sm font-semibold whitespace-nowrap shrink-0 min-h-[44px]"
-          >
-            <span>Start a Conversation</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-1" />
-          </button>
         </div>
       </section>
     </div>

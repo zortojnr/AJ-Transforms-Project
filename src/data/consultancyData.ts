@@ -101,6 +101,7 @@ export const BRAND = {
 
 export const MEDIA_ASSETS = {
   logo: '/src/assets/images/aj-symbol-navy-gold.jpg',
+  navLogo: '/aj-transforms-logo.jpg',
   atriumLight: '/src/assets/images/arch_atrium_light_1795006637773.jpg',
   joineryDetail: '/src/assets/images/arch_joinery_detail_1795006662862.jpg',
   consultancyStudio: '/src/assets/images/arch_consultancy_studio_1795006635192.jpg',

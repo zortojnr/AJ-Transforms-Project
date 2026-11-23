@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { BRAND, MEDIA_ASSETS, type RouteKey } from '../data/consultancyData';
+import { MEDIA_ASSETS, type RouteKey } from '../data/consultancyData';
 
 interface NavbarProps {
   activeRoute: RouteKey;
@@ -9,7 +9,7 @@ interface NavbarProps {
 }
 
 const NAV_LINKS: { key: RouteKey; label: string }[] = [
-  { key: 'about', label: 'About AJ' },
+  { key: 'about', label: 'About Us' },
   { key: 'capabilities', label: 'Capabilities' },
   { key: 'solutions', label: 'Solutions' },
   { key: 'industries', label: 'Industries' },
@@ -55,14 +55,13 @@ export function Navbar({ activeRoute, onNavigate }: NavbarProps) {
             e.preventDefault();
             handleLinkClick('home');
           }}
-          className="flex min-w-0 items-center gap-2 sm:gap-3 font-display text-[1.25rem] sm:text-[1.7rem] tracking-[-0.01em] text-[#F5F3EE] whitespace-nowrap shrink-0 hover:text-[#B69A70] transition-colors duration-150"
+          className="flex min-w-0 items-center shrink-0 transition-opacity duration-150 hover:opacity-90"
         >
           <img
-            src={MEDIA_ASSETS.logo}
-            alt=""
-            className="w-9 h-9 sm:w-10 sm:h-10 aspect-square shrink-0 rounded-full object-contain bg-white"
+            src={MEDIA_ASSETS.navLogo}
+            alt="AJ Transforms"
+            className="h-[44px] sm:h-[52px] w-auto max-w-[150px] sm:max-w-[260px] object-contain object-left"
           />
-          {BRAND.shortName}
         </a>
 
         {/* Zone 2: 5 Concise Single-Line Navigation Links */}

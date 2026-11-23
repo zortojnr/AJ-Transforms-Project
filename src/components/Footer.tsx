@@ -6,7 +6,7 @@ interface FooterProps {
 
 const FOOTER_NAV: { key: RouteKey; label: string }[] = [
   { key: 'home', label: 'Home' },
-  { key: 'about', label: 'About AJ' },
+  { key: 'about', label: 'About Us' },
   { key: 'capabilities', label: 'Capabilities' },
   { key: 'solutions', label: 'Solutions' },
   { key: 'industries', label: 'Industries' },
